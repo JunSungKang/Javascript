@@ -5,7 +5,7 @@ Creater person - jskang(강준성)
 
 
 
-Function description.
+Function description & using.
 -
 - specialDateWeeks(new Date("2010-01-01"));
  > (Korean Description) 원하는 날짜("2010-01-01")이 해당하는 년도의 몇 주차인지 계산하여 출력한다. <br>
@@ -13,6 +13,7 @@ Function description.
   <br> <br>
  > Return data = 1
   <br> <br>
+  
 
 - dateFormatConvert(new Date("2010-01-01"));
  > (Korean Description) 원하는 날짜("2010-01-01")의 포맷을 특정 포맷형식으로 변환하여 출력한다. <br>
@@ -20,6 +21,7 @@ Function description.
   <br> <br>
  > Return data = "2010/01/01"
   <br> <br>
+
 
 - splitMonth(new Date("2010-01-01"));
  > (Korean Description) 원하는 날짜("2010-01-01")의 해당하는 월을 출력한다. <br>
@@ -29,10 +31,6 @@ Function description.
   <br> <br>
 
 
-
-
-Function using.
--
 - yearsCalc("2010-01-01");
  > (Korean Description) 원하는 날짜("2010-01-01")부터 현재 날짜("2017-11-13")까지 해당하는 모든 년도를 출력한다. <br>
  > (Engular Description) Print all the years from the desired date ("2010-01-01") to the current date ("2017-11-13").
