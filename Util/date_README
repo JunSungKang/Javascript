@@ -1,5 +1,7 @@
-Function description & using.
+# Util_Date
 
+Function description & using.
+-
 
 specialDateWeeks(new Date("2010-01-01"));
 > (Korean Description) 원하는 날짜("2010-01-01")이 해당하는 년도의 몇 주차인지 계산하여 출력한다. 
