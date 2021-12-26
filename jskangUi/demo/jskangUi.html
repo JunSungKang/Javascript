@@ -1,0 +1,49 @@
+<meta charset="UTF-8"/>
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<script src="../js/jskangUi.js"></script>
+<script>
+    let icon = Icon.Builder;   
+    let table = Table.Builder;
+
+    function test() {
+        console.log(table.checkedData());
+    }
+    
+    window.onload = () => { 
+        icon1 = icon.setId("n").setIcon("glyphicon glyphicon-heart")
+        .addEventListener("click", (d) => { console.log(d.path[2].cells[0].children[0].id+ " 하트"); })
+        .build();
+
+        icon2 = icon.setId("n").setIcon("glyphicon glyphicon-book")
+        .addEventListener("click", (d) => { console.log(d.path[2].cells[0].children[0].id+ " 책"); })
+        .build();
+
+        let json = {
+            "columns": [
+                { "field": "체크박스", "type": "checkbox", "width": "20%" },
+                { "field": "이름", "type": "none", "width": "20%" },
+                { "field": "나이", "type": "none", "width": "20%", "sort": true },
+                { "field": "심장", "type": "none", "width": "30%", "sort": false },
+                { "field": "심장", "type": "none", "width": "30%", "sort": false }
+            ],
+            "dataSource": [
+                { "체크박스": "강준성", "이름": "강준성", "나이": 30, "심장": icon1, "책": icon2},
+                { "체크박스": "강성호", "이름": "강성호", "나이": 20, "심장": icon1, "책": icon2},
+                { "체크박스": "강성현", "이름": "강성현", "나이": 27, "심장": icon1, "책": icon2}
+            ]
+        }
+        
+        table.setClass("abcClass").setId("abcId").setDataSource(json).build(1, "test");
+    }
+</script>
+
+<button onclick="test();">CheckedData</button>
+<div id="test"></div>
